@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+# Awesome Works - Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page for **Awesome Works** - an AI consulting company specializing in Generative AI, chatbots, AI agents, and business automation.
 
-Currently, two official plugins are available:
+🌐 **Live:** [awesomeworks.ai](https://awesomeworks.ai)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## React Compiler
+- **Framework:** React 19 + TypeScript + Vite 5
+- **Styling:** Tailwind CSS 4 + Radix UI Themes
+- **Internationalization:** i18next (Polish 🇵🇱 / English 🇬🇧)
+- **Animations:** Custom CSS animations (particles, gradients, glassmorphism)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- 🎨 Dark mode premium design with gradient accents
+- ✨ Animated particles and floating background blobs
+- 📱 Fully responsive (mobile-first)
+- 🌍 Multi-language support (PL/EN)
+- 💬 Contact form
+- 🎯 Smooth scroll navigation
+- 🔮 Glassmorphism effects
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# Install dependencies
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Run development server
+npm run dev
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/       # React components (Hero, Services, About, etc.)
+├── i18n/
+│   └── locales/      # Translation files (pl.json, en.json)
+├── index.css         # Global styles, animations, CSS variables
+├── App.tsx           # Main app component
+└── main.tsx          # Entry point
+```
+
+## Color Palette
+
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Primary | `#6366F1` | Indigo/purple accent |
+| Secondary | `#10B981` | Emerald/green accent |
+| Background | `#0F0F1A` | Dark background |
+| Surface | `#1A1A2E` | Cards, sections |
+| Text | `#F8FAFC` | Main text |
+| Text Muted | `#94A3B8` | Secondary text |
+
+## Author
+
+**Rafał Łazicki** - Founder @ Awesome Works
+
+---
+
+Built with 💜 and AI
+
