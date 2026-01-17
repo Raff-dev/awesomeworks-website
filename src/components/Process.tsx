@@ -56,7 +56,7 @@ export function Process() {
         <div className="sm:hidden relative" style={{ marginRight: '1.5rem' }}>
           {/* Vertical line */}
           <div style={{ position: 'absolute', left: '1.75rem', top: '1.5rem', bottom: '1.5rem', width: '2px', background: 'linear-gradient(to bottom, var(--color-primary), var(--color-secondary))' }} />
-          
+
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
             {steps.map((step, index) => (
               <div key={step.key} className="flex items-start gap-5">
@@ -69,7 +69,7 @@ export function Process() {
                     {index + 1}
                   </div>
                 </div>
-                
+
                 {/* Content */}
                 <div className="pt-2 flex-1" style={{ paddingRight: '0.5rem' }}>
                   <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', marginBottom: '0.5rem', color: 'white' }}>
