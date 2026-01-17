@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "We build AI that",
+    "titleHighlight": "works for you",
+    "subtitle": "Automation, chatbots, and AI agents for businesses that want to save time and money. No fluff, just results.",
+    "cta": "Let's talk",
+    "ctaSecondary": "See services"
+  },
+  "services": {
+    "title": "What we can do for you",
+    "subtitle": "We specialize in AI solutions that actually impact your business",
+    "consulting": {
+      "title": "AI Consulting",
+      "description": "We'll help you understand where AI can bring the most value to your company. Process audit, implementation strategy, tool selection."
+    },
+    "chatbots": {
+      "title": "Chatbots",
+      "description": "Intelligent chatbots that answer customer questions 24/7, qualify leads, and take the load off your team."
+    },
+    "agents": {
+      "title": "AI Agents",
+      "description": "Autonomous AI systems that perform complex tasks: analyze data, generate reports, manage processes."
+    },
+    "automation": {
+      "title": "Automation",
+      "description": "Automation of repetitive tasks: document processing, emails, data entry, system integrations."
+    }
+  },
+  "process": {
+    "title": "How we work",
+    "step1": {
+      "title": "Conversation",
+      "description": "We learn about your business and challenges. No strings attached."
+    },
+    "step2": {
+      "title": "Proposal",
+      "description": "We prepare a tailored solution with clear pricing."
+    },
+    "step3": {
+      "title": "Execution",
+      "description": "We build, test, deploy. You're kept in the loop."
+    },
+    "step4": {
+      "title": "Support",
+      "description": "We don't leave you alone after deployment."
+    }
+  },
+  "benefits": {
+    "title": "Why AI?",
+    "time": {
+      "title": "Save time",
+      "description": "Automate repetitive tasks and focus on what really matters."
+    },
+    "cost": {
+      "title": "Reduce costs",
+      "description": "AI works 24/7 without vacations, sick days, or overtime."
+    },
+    "scale": {
+      "title": "Scale up",
+      "description": "Handle 10x more customers without hiring 10x more people."
+    },
+    "quality": {
+      "title": "Quality",
+      "description": "AI doesn't have bad days. Consistent, predictable quality."
+    }
+  },
+  "about": {
+    "title": "About",
+    "heading": "Founder",
+    "intro": "Hi! I'm the founder of Awesome Works.",
+    "experience": "I have 6 years of experience in the tech industry, with over 3 years specializing in",
+    "description": "I create systems that streamline business operations — automating routine tasks, increasing efficiency, and reducing operational costs."
+  },
+  "cta": {
+    "title": "Ready for automation?",
+    "subtitle": "Let's talk about how AI can help your business. First consultation is free.",
+    "button": "Book a call"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Write to us or schedule a call",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "John Smith",
+      "email": "Email",
+      "emailPlaceholder": "john@company.com",
+      "company": "Company (optional)",
+      "companyPlaceholder": "Company name",
+      "message": "Message",
+      "messagePlaceholder": "Describe your project or ask a question...",
+      "submit": "Send",
+      "success": "Thanks! We'll get back to you soon."
+    }
+  },
+  "footer": {
+    "tagline": "We build AI that works for you",
+    "rights": "All rights reserved"
+  }
+}
