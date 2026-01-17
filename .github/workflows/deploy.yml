@@ -1,4 +1,4 @@
-git rm PRD.md && git commit -m "Remove PRD" && git pushname: Deploy to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
     push:
