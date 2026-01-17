@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 export function Contact() {
   const { t } = useTranslation();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,15 +14,38 @@ export function Contact() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+    setIsLoading(true);
 
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', company: '', message: '' });
-    }, 3000);
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '96db43d4-48ed-482a-9186-a1527a1b7833',
+          subject: `Nowa wiadomość od ${formData.name} - Awesome Works`,
+          from_name: formData.name,
+          email: formData.email,
+          company: formData.company || 'Nie podano',
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({ name: '', email: '', company: '', message: '' });
+        }, 3000);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -157,14 +181,17 @@ export function Contact() {
                     <Button
                       size="3"
                       type="submit"
+                      disabled={isLoading}
                       style={{
                         background: 'linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%)',
-                        cursor: 'pointer',
-                        marginTop: '0.5rem'
+                        cursor: isLoading ? 'wait' : 'pointer',
+                        marginTop: '0.5rem',
+                        opacity: isLoading ? 0.7 : 1,
                       }}
                     >
                       <Send size={18} />
-                      {t('contact.form.submit')}
+                      {isLoading ? 'Wysyłanie...' : t('contact.form.submit')}
+                    </Button>
                     </Button>
                   </Flex>
                 </form>
