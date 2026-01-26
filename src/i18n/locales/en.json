@@ -96,7 +96,10 @@
       "message": "Message",
       "messagePlaceholder": "Describe your project or ask a question...",
       "submit": "Send",
-      "success": "Thanks! We'll get back to you soon."
+      "success": "Thanks! We'll get back to you soon.",
+      "testimonial": "First consultation is free. Let's talk about your needs without commitment.",
+      "formTitle": "Leave us your contact - we'll get back to you within 24h!",
+      "minChars": "min. 10 characters"
     }
   },
   "footer": {

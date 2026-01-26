@@ -91,7 +91,7 @@ export function Contact() {
               {/* Social proof / trust */}
               <Card style={{ background: 'rgba(26, 26, 46, 0.8)', backdropFilter: 'blur(10px)', border: '1px solid rgba(99, 102, 241, 0.2)' }}>
                 <Text as="p" style={{ color: 'var(--color-text-muted)', fontStyle: 'italic' }}>
-                  "Pierwsza konsultacja jest bezpłatna. Porozmawiajmy o Twoich potrzebach bez zobowiązań."
+                  "{t('contact.form.testimonial')}"
                 </Text>
               </Card>
             </div>
@@ -99,7 +99,7 @@ export function Contact() {
             {/* Right side - Form */}
             <Card size="4" style={{ background: 'rgba(26, 26, 46, 0.8)', backdropFilter: 'blur(10px)', border: '1px solid rgba(99, 102, 241, 0.2)' }}>
                             <Text as="p" size="4" style={{ color: 'var(--color-primary)', fontWeight: 600, marginBottom: '1.5rem', textAlign: 'center' }}>
-                              Zostaw do siebie kontakt – odezwiemy się w 24h!
+                              {t('contact.form.formTitle')}
                             </Text>
               {isSubmitted ? (
                 <Flex direction="column" align="center" justify="center" style={{ padding: '3rem 0' }}>
@@ -212,7 +212,7 @@ export function Contact() {
                     {/* Message field */}
                     <Box>
                       <Text as="label" size="2" weight="medium" style={{ display: 'block', marginBottom: '0.5rem', color: 'white' }}>
-                        {t('contact.form.message')} * <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)' }}>(min. 10 znaków)</span>
+                        {t('contact.form.message')} * <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)' }}>({t('contact.form.minChars')})</span>
                       </Text>
                       <TextArea
                         size="3"

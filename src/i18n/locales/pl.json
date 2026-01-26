@@ -96,7 +96,10 @@
       "message": "Wiadomość",
       "messagePlaceholder": "Opisz swój projekt lub zadaj pytanie...",
       "submit": "Wyślij",
-      "success": "Dzięki! Odezwiemy się wkrótce."
+      "success": "Dzięki! Odezwiemy się wkrótce.",
+      "testimonial": "Pierwsza konsultacja jest bezpłatna. Porozmawiajmy o Twoich potrzebach bez zobowiązań.",
+      "formTitle": "Zostaw do siebie kontakt – odezwiemy się w 24h!",
+      "minChars": "min. 10 znaków"
     }
   },
   "footer": {
