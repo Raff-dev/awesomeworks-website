@@ -74,6 +74,12 @@
         "role": "Software Engineer",
         "photo": "/filip.jpeg",
         "description": "Software Engineer"
+      },
+      {
+        "name": "Tymoteusz",
+        "role": "Software Engineer",
+        "photo": "/tymek.jpg",
+        "description": "Software Engineer"
       }
     ]
   },
