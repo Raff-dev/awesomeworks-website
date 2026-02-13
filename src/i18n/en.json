@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "title": "Awesome Works AI — More Time, Less Costs | AI Automation for Business",
+    "description": "Save 20+ hours weekly and cut operational costs by 40%. AI that takes over routine tasks so you can focus on growth. Free consultation."
+  },
+  "nav": {
+    "services": "Benefits",
+    "why": "Why AI",
+    "process": "How We Work",
+    "about": "Team",
+    "products": "Products",
+    "contact": "Contact",
+    "cta": "Let's Talk"
+  },
+  "hero": {
+    "title_line1": "Save time and money",
+    "title_line2": "with AI",
+    "subtitle": "Automate routine tasks, serve customers 24/7, and scale your business without hiring. Real results in weeks, not months.",
+    "cta_primary": "Free consultation",
+    "cta_secondary": "See benefits",
+    "cta_micro": "Response within 24h · No commitment"
+  },
+  "services": {
+    "title": "What benefits will you gain?",
+    "subtitle": "See how AI can increase your revenue and reduce costs",
+    "cards": [
+      {
+        "title": "Find hidden savings",
+        "description": "Discover where your company wastes time and money. Get a process automation roadmap with ROI estimates — before you spend a dime."
+      },
+      {
+        "title": "Serve customers 24/7",
+        "description": "Stop losing leads due to slow responses. Your customers get help instantly, anytime — while your team handles what matters most."
+      },
+      {
+        "title": "Free up your team's time",
+        "description": "Reports, analysis, data management — let AI handle it. Your people focus on strategy and growth, not tedious tasks."
+      },
+      {
+        "title": "End repetitive work",
+        "description": "Documents, emails, data entry — all automated. Zero errors, zero boring tasks, more time for what matters."
+      }
+    ]
+  },
+  "why_ai": {
+    "title": "Why AI?",
+    "items": [
+      { "emoji": "⏱️", "title": "Save time", "description": "Automate repetitive tasks and focus on what really matters." },
+      { "emoji": "💰", "title": "Reduce costs", "description": "AI works 24/7 without vacations, sick days, or overtime." },
+      { "emoji": "📈", "title": "Scale up", "description": "Handle 10x more customers without hiring 10x more people." },
+      { "emoji": "✅", "title": "Quality", "description": "AI doesn't have bad days. Consistent, predictable quality." }
+    ]
+  },
+  "process": {
+    "title": "How we work",
+    "steps": [
+      { "number": "1", "title": "Conversation", "description": "We learn about your business and challenges. No strings attached." },
+      { "number": "2", "title": "Proposal", "description": "We prepare a tailored solution with clear pricing." },
+      { "number": "3", "title": "Execution", "description": "We build, test, deploy. You're kept in the loop." },
+      { "number": "4", "title": "Support", "description": "We don't leave you alone after deployment." }
+    ]
+  },
+  "team": {
+    "title": "Our Team",
+    "members": [
+      {
+        "name": "Rafał Łazicki",
+        "role": "Founder",
+        "photo": "/rafal.jpeg",
+        "description": "6 years in the tech industry, over 3 years specializing in Generative AI. I create systems that streamline business operations."
+      },
+      {
+        "name": "Filip",
+        "role": "Software Engineer",
+        "photo": "/filip.jpeg",
+        "description": "Software Engineer"
+      }
+    ]
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Ready-to-deploy solutions you can implement right away",
+    "callwise": {
+      "tagline": "Every call scored. Every rep better. Automatically.",
+      "description": "AI analyzes 100% of sales calls and shows what separates top performers from the rest. Your team learns faster, closes more deals.",
+      "cta": "Try for free",
+      "microcopy": "5 calls free · No credit card"
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "What types of projects do you specialize in?",
+        "a": "We specialize in AI solutions and automation: chatbots, call analysis, process automation, recommendation systems. If your problem can be solved with AI — let's talk."
+      },
+      {
+        "q": "How much does a project cost?",
+        "a": "Every project is priced individually based on your specific needs and expectations. After a free discovery consultation we prepare a tailored quote — usually within 5 business days."
+      },
+      {
+        "q": "How long does a project take?",
+        "a": "MVP in 4–6 weeks, full product in 2–4 months. Depends on complexity — we establish a concrete timeline after the discovery call."
+      },
+      {
+        "q": "Do you offer post-launch support?",
+        "a": "Yes. After launch we offer maintenance and development packages. We don't abandon clients after deployment."
+      },
+      {
+        "q": "What technologies do you use?",
+        "a": "Python, TypeScript, React, Astro, OpenAI, Anthropic, LangChain, RAG pipelines, cloud-native (AWS/GCP). We match the stack to the project needs."
+      },
+      {
+        "q": "How do I get started?",
+        "a": "Book a free consultation via form or Calendly. In a 30-minute call we'll learn your needs and propose a direction. No commitment."
+      }
+    ]
+  },
+  "final_cta": {
+    "title": "How much can you save?",
+    "subtitle": "Let's talk about your processes. We'll show you concrete numbers — how much time and money you can recover. No strings attached.",
+    "cta_primary": "Check for free",
+    "cta_secondary": "Book a meeting"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Write to us or schedule a call",
+    "email_label": "Email",
+    "calendly_label": "Book a meeting",
+    "testimonial": "First consultation is free. Let's talk about your needs without commitment.",
+    "form_title": "Leave us your contact — we'll get back within 24h!",
+    "form_name": "Name",
+    "form_email": "Email",
+    "form_message": "Message",
+    "form_submit": "Send message",
+    "form_success": "Thanks! We'll get back to you soon."
+  },
+  "footer": {
+    "tagline": "More time, less costs, better results",
+    "navigation": "Navigation",
+    "legal": "Legal",
+    "nav_links": {
+      "Benefits": "#services",
+      "How We Work": "#process",
+      "Team": "#team",
+      "Products": "#products",
+      "Contact": "#contact"
+    },
+    "legal_links": {
+      "Privacy Policy": "/en/privacy",
+      "Terms of Service": "/en/terms"
+    },
+    "copyright": "© 2026 Awesome Works AI. All rights reserved."
+  }
+}

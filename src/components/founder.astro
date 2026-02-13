@@ -1,0 +1,48 @@
+---
+import { t, type Locale } from "@/i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+---
+
+<section id="team" class="relative border-t border-white/[0.06] py-20 sm:py-28">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <h2
+      class="animate-on-scroll mb-14 text-center text-3xl font-bold tracking-tight sm:text-4xl"
+    >
+      {i.team.title}
+    </h2>
+
+    <div class="mx-auto grid max-w-3xl gap-8 sm:grid-cols-2">
+      {
+        i.team.members.map((member, idx) => (
+          <div
+            class="animate-on-scroll flex flex-col items-center text-center"
+            style={`transition-delay: ${idx * 120}ms`}
+          >
+            <div class="relative mb-5">
+              <div class="absolute -inset-1 rounded-2xl bg-gradient-to-br from-indigo-500/20 to-emerald-500/20 blur-sm" />
+              <img
+                src={member.photo}
+                alt={member.name}
+                class="relative h-48 w-48 rounded-2xl border-2 border-white/[0.06] object-cover"
+                width="192"
+                height="192"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="text-xl font-bold text-foreground">{member.name}</h3>
+            <p class="mb-2 text-sm font-medium text-primary">{member.role}</p>
+            <p class="max-w-xs text-sm leading-relaxed text-muted-foreground">
+              {member.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

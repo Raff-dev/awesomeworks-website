@@ -1,0 +1,20 @@
+---
+import type { Locale } from "@/i18n/utils";
+
+interface Props {
+  currentLocale: Locale;
+}
+
+const { currentLocale } = Astro.props;
+const otherLocale = currentLocale === "en" ? "pl" : "en";
+const otherLabel = currentLocale === "en" ? "PL" : "EN";
+const otherFlag = currentLocale === "en" ? "🇵🇱" : "🇬🇧";
+---
+
+<a
+  href={`/${otherLocale}/`}
+  class="inline-flex items-center gap-1.5 rounded-lg border border-white/[0.08] bg-white/[0.04] px-3 py-1.5 text-sm font-medium text-muted-foreground transition-all hover:bg-white/[0.08] hover:text-foreground"
+>
+  <span>{otherFlag}</span>
+  <span>{otherLabel}</span>
+</a>

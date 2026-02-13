@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "title": "Awesome Works AI — Więcej czasu, mniej kosztów | Automatyzacja AI",
+    "description": "Oszczędź 20+ godzin tygodniowo i zredukuj koszty operacyjne o 40%. AI, które przejmuje rutynowe zadania, żebyś Ty mógł skupić się na rozwoju. Bezpłatna konsultacja."
+  },
+  "nav": {
+    "services": "Korzyści",
+    "why": "Dlaczego AI",
+    "process": "Jak działamy",
+    "about": "Zespół",
+    "products": "Produkty",
+    "contact": "Kontakt",
+    "cta": "Porozmawiajmy"
+  },
+  "hero": {
+    "title_line1": "Oszczędź czas i pieniądze",
+    "title_line2": "dzięki AI",
+    "subtitle": "Zautomatyzuj rutynowe zadania, obsługuj klientów 24/7 i skaluj biznes bez zatrudniania. Konkretne wyniki w tygodniach, nie miesiącach.",
+    "cta_primary": "Bezpłatna konsultacja",
+    "cta_secondary": "Zobacz korzyści",
+    "cta_micro": "Odpowiedź w 24h · Bez zobowiązań"
+  },
+  "services": {
+    "title": "Jakie korzyści zyskasz?",
+    "subtitle": "Sprawdź, jak AI może zwiększyć Twoje przychody i zredukować koszty",
+    "cards": [
+      {
+        "title": "Znajdź ukryte oszczędności",
+        "description": "Dowiedz się, gdzie Twoja firma traci czas i pieniądze. Otrzymasz mapę procesów do automatyzacji z oszacowaniem ROI — zanim wydasz złotówkę."
+      },
+      {
+        "title": "Obsługuj klientów 24/7",
+        "description": "Nie trać leadów przez brak odpowiedzi. Twoi klienci dostaną pomoc natychmiast, o każdej porze — a Twój zespół zajmie się ważniejszymi sprawami."
+      },
+      {
+        "title": "Uwolnij czas zespołu",
+        "description": "Raporty, analizy, zarządzanie danymi — niech AI to robi. Twoi ludzie skupią się na strategii i rozwoju, nie na żmudnych zadaniach."
+      },
+      {
+        "title": "Koniec z powtarzalną pracą",
+        "description": "Dokumenty, maile, wprowadzanie danych — wszystko dzieje się automatycznie. Zero błędów, zero nudnych zadań, więcej czasu na to, co ważne."
+      }
+    ]
+  },
+  "why_ai": {
+    "title": "Dlaczego AI?",
+    "items": [
+      { "emoji": "⏱️", "title": "Oszczędność czasu", "description": "Automatyzuj powtarzalne zadania i skup się na tym, co naprawdę ważne." },
+      { "emoji": "💰", "title": "Redukcja kosztów", "description": "AI pracuje 24/7 bez urlopów, zwolnień i nadgodzin." },
+      { "emoji": "📈", "title": "Skalowalność", "description": "Obsłuż 10x więcej klientów bez zatrudniania 10x więcej ludzi." },
+      { "emoji": "✅", "title": "Jakość", "description": "AI nie ma gorszych dni. Stała, przewidywalna jakość." }
+    ]
+  },
+  "process": {
+    "title": "Jak działamy",
+    "steps": [
+      { "number": "1", "title": "Rozmowa", "description": "Poznajemy Twój biznes i wyzwania. Bez zobowiązań." },
+      { "number": "2", "title": "Propozycja", "description": "Przygotowujemy rozwiązanie szyte na miarę z jasną wyceną." },
+      { "number": "3", "title": "Realizacja", "description": "Budujemy, testujemy, wdrażamy. Jesteś na bieżąco." },
+      { "number": "4", "title": "Wsparcie", "description": "Po wdrożeniu nie zostawiamy Cię samego." }
+    ]
+  },
+  "team": {
+    "title": "Nasz zespół",
+    "members": [
+      {
+        "name": "Rafał Łazicki",
+        "role": "Founder",
+        "photo": "/rafal.jpeg",
+        "description": "6 lat w branży technologicznej, ponad 3 lata specjalizacji w Generative AI. Tworzę systemy usprawniające pracę firm."
+      },
+      {
+        "name": "Filip",
+        "role": "Software Engineer",
+        "photo": "/filip.jpeg",
+        "description": "Software Engineer"
+      }
+    ]
+  },
+  "products": {
+    "title": "Nasze produkty",
+    "subtitle": "Gotowe rozwiązania, które możesz wdrożyć od razu",
+    "callwise": {
+      "tagline": "Każda rozmowa oceniona. Każdy handlowiec lepszy.",
+      "description": "AI analizuje 100% rozmów sprzedażowych i pokazuje, co odróżnia najlepszych od reszty. Twój zespół uczy się szybciej, zamyka więcej deali.",
+      "cta": "Wypróbuj za darmo",
+      "microcopy": "5 rozmów za darmo · Bez karty"
+    }
+  },
+  "faq": {
+    "title": "Najczęstsze pytania",
+    "items": [
+      {
+        "q": "Na jakie projekty się specjalizujecie?",
+        "a": "Specjalizujemy się w rozwiązaniach AI i automatyzacji: chatboty, analiza rozmów, automatyzacja procesów, systemy rekomendacji. Jeśli Twój problem można rozwiązać z AI — porozmawiajmy."
+      },
+      {
+        "q": "Ile kosztuje projekt?",
+        "a": "Każdy projekt wyceniamy indywidualnie, w zależności od Twoich potrzeb i oczekiwań. Po bezpłatnej konsultacji discovery przygotowujemy spersonalizowaną wycenę — zwykle w ciągu 5 dni roboczych."
+      },
+      {
+        "q": "Jak długo trwa realizacja?",
+        "a": "MVP w 4–6 tygodni, pełny produkt w 2–4 miesiące. Zależy od złożoności — konkretny harmonogram ustalamy po discovery call."
+      },
+      {
+        "q": "Czy oferujecie wsparcie po wdrożeniu?",
+        "a": "Tak. Po launchu oferujemy pakiety maintenance i rozwoju. Nie zostawiamy klientów po wdrożeniu."
+      },
+      {
+        "q": "Jakie technologie używacie?",
+        "a": "Python, TypeScript, React, Astro, OpenAI, Anthropic, LangChain, RAG pipelines, cloud-native (AWS/GCP). Dobieramy stack do potrzeb projektu."
+      },
+      {
+        "q": "Jak zacząć współpracę?",
+        "a": "Umów bezpłatną konsultację przez formularz lub Calendly. Na 30-minutowej rozmowie poznamy Twoje potrzeby i zaproponujemy kierunek. Bez zobowiązań."
+      }
+    ]
+  },
+  "final_cta": {
+    "title": "Ile możesz zaoszczędzić?",
+    "subtitle": "Porozmawiajmy o Twoich procesach. Pokażemy konkretne liczby — ile czasu i pieniędzy możesz odzyskać. Bez zobowiązań.",
+    "cta_primary": "Sprawdź za darmo",
+    "cta_secondary": "Umów spotkanie"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Napisz do nas lub umów się na rozmowę",
+    "email_label": "Email",
+    "calendly_label": "Umów spotkanie w kalendarzu",
+    "testimonial": "Pierwsza konsultacja jest bezpłatna. Porozmawiajmy o Twoich potrzebach bez zobowiązań.",
+    "form_title": "Zostaw do siebie kontakt – odezwiemy się w 24h!",
+    "form_name": "Imię",
+    "form_email": "Email",
+    "form_message": "Wiadomość",
+    "form_submit": "Wyślij wiadomość",
+    "form_success": "Dzięki! Odezwiemy się wkrótce."
+  },
+  "footer": {
+    "tagline": "Więcej czasu, mniej kosztów, lepsze wyniki",
+    "navigation": "Nawigacja",
+    "legal": "Prawne",
+    "nav_links": {
+      "Korzyści": "#services",
+      "Jak działamy": "#process",
+      "Zespół": "#team",
+      "Produkty": "#products",
+      "Kontakt": "#contact"
+    },
+    "legal_links": {
+      "Polityka prywatności": "/pl/privacy",
+      "Regulamin": "/pl/terms"
+    },
+    "copyright": "© 2026 Awesome Works AI. Wszelkie prawa zastrzeżone."
+  }
+}

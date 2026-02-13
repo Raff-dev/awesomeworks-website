@@ -1,0 +1,78 @@
+---
+import { t, type Locale } from "@/i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+---
+
+<footer class="border-t border-white/[0.06] bg-white/[0.02] py-14">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Brand -->
+      <div>
+        <a href={`/${locale}/`} class="mb-4 inline-flex items-center gap-2.5">
+          <img src="/icon.png" alt="AwesomeWorks" class="h-8 w-8 rounded-md" width="32" height="32" />
+          <span class="text-lg font-bold text-foreground">AwesomeWorks</span>
+        </a>
+        <p class="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
+          {i.footer.tagline}
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h4 class="mb-4 text-sm font-semibold text-foreground">
+          {i.footer.navigation}
+        </h4>
+        <ul class="space-y-2.5">
+          {
+            Object.entries(i.footer.nav_links).map(([label, href]) => (
+              <li>
+                <a
+                  href={href}
+                  class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h4 class="mb-4 text-sm font-semibold text-foreground">
+          {i.footer.legal}
+        </h4>
+        <ul class="space-y-2.5">
+          {
+            Object.entries(i.footer.legal_links).map(([label, href]) => (
+              <li>
+                <a
+                  href={href}
+                  class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div
+      class="mt-12 flex flex-col items-center justify-between border-t border-white/[0.06] pt-8 sm:flex-row"
+    >
+      <p class="text-sm text-muted-foreground/50">
+        {i.footer.copyright}
+      </p>
+    </div>
+  </div>
+</footer>

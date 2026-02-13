@@ -1,0 +1,123 @@
+---
+import "@fontsource-variable/inter";
+import "@/styles/globals.css";
+import { t, type Locale } from "@/i18n/utils";
+
+interface Props {
+  title: string;
+  description: string;
+  locale: Locale;
+  ogImage?: string;
+}
+
+const { title, description, locale, ogImage } = Astro.props;
+const altLocale = locale === "en" ? "pl" : "en";
+const siteBase = Astro.site?.href ?? "https://awesomeworks.ai";
+const canonicalUrl = new URL(Astro.url.pathname, siteBase);
+const altUrl = new URL(`/${altLocale}/`, siteBase);
+const defaultUrl = new URL("/en/", siteBase);
+const ogImageAbsolute = new URL(
+  ogImage ?? (locale === "pl" ? "/og-image-pl.png" : "/og-image-en.png"),
+  siteBase
+).href;
+
+const i = t(locale);
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "AwesomeWorks",
+  url: siteBase,
+  logo: new URL("/logo.png", siteBase).href,
+  image: new URL("/og-image-en.png", siteBase).href,
+  description: description,
+  foundingDate: "2021",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Warsaw",
+    addressCountry: "PL",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "sales",
+    email: "hello@awesomeworks.ai",
+    availableLanguage: ["English", "Polish"],
+  },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: i.faq.items.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+---
+
+<!doctype html>
+<html lang={locale} class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#0a0a12" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="canonical" href={canonicalUrl.href} />
+    <link rel="alternate" hreflang={locale} href={canonicalUrl.href} />
+    <link rel="alternate" hreflang={altLocale} href={altUrl.href} />
+    <link rel="alternate" hreflang="x-default" href={defaultUrl.href} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AwesomeWorks" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageAbsolute} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content={canonicalUrl.href} />
+    <meta property="og:locale" content={locale === "en" ? "en_US" : "pl_PL"} />
+    <meta
+      property="og:locale:alternate"
+      content={locale === "en" ? "pl_PL" : "en_US"}
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageAbsolute} />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(organizationJsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  </head>
+  <body class="min-h-screen overflow-x-hidden">
+    <slot />
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+      );
+      document
+        .querySelectorAll(".animate-on-scroll")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

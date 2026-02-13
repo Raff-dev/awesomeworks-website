@@ -1,0 +1,47 @@
+---
+import { t, type Locale } from "@/i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+---
+
+<section id="why-ai" class="relative border-y border-white/[0.06] bg-white/[0.02] py-20 sm:py-28">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <h2
+      class="animate-on-scroll mb-14 text-center text-3xl font-bold tracking-tight sm:text-4xl"
+    >
+      {i.why_ai.title}
+    </h2>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        i.why_ai.items.map((item, idx) => {
+          const icons = [
+            /* Clock */ `<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+            /* DollarSign */ `<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>`,
+            /* TrendingUp */ `<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`,
+            /* ShieldCheck */ `<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>`,
+          ];
+          return (
+            <div
+              class="animate-on-scroll glass-subtle rounded-xl p-6 text-center transition-all hover:border-white/[0.08]"
+              style={`transition-delay: ${idx * 80}ms`}
+            >
+              <div class="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <Fragment set:html={icons[idx]} />
+              </div>
+              <h3 class="mb-1 text-base font-semibold text-foreground">
+                {item.title}
+              </h3>
+              <p class="text-sm text-muted-foreground">{item.description}</p>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>

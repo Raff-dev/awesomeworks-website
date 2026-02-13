@@ -1,0 +1,85 @@
+---
+import { t, type Locale } from "@/i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+---
+
+<section class="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
+  <div class="pointer-events-none absolute inset-0 gradient-mesh-strong"></div>
+
+  <div
+    class="pointer-events-none absolute top-20 left-1/4 h-72 w-72 rounded-full bg-indigo-500/10 blur-3xl"
+  >
+  </div>
+  <div
+    class="pointer-events-none absolute right-1/4 bottom-10 h-96 w-96 rounded-full bg-emerald-500/8 blur-3xl"
+  >
+  </div>
+
+  <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1
+        class="mb-6 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl"
+      >
+        <span class="block text-foreground">{i.hero.title_line1}</span>
+        <span class="block text-gradient">{i.hero.title_line2}</span>
+      </h1>
+
+      <p
+        class="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl"
+      >
+        {i.hero.subtitle}
+      </p>
+
+      <div
+        class="flex flex-col items-center justify-center gap-4 sm:flex-row"
+      >
+        <a
+          href="#contact"
+          class="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-400 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-indigo-500/25 transition-all hover:shadow-xl hover:shadow-indigo-500/30 hover:brightness-110"
+        >
+          {i.hero.cta_primary}
+          <svg
+            class="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+        <a
+          href="#services"
+          class="inline-flex items-center gap-2 rounded-xl border border-white/[0.1] bg-white/[0.04] px-8 py-3.5 text-base font-semibold text-foreground transition-all hover:bg-white/[0.08]"
+        >
+          {i.hero.cta_secondary}
+          <svg
+            class="h-4 w-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 5v14"></path>
+            <path d="m19 12-7 7-7-7"></path>
+          </svg>
+        </a>
+      </div>
+
+      <p class="mt-4 text-sm text-muted-foreground/70">
+        {i.hero.cta_micro}
+      </p>
+    </div>
+  </div>
+</section>

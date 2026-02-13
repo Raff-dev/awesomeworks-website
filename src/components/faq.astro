@@ -1,0 +1,47 @@
+---
+import { t, type Locale } from "@/i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+---
+
+<section id="faq" class="relative border-t border-white/[0.06] py-20 sm:py-28">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <h2
+      class="animate-on-scroll mb-12 text-center text-3xl font-bold tracking-tight sm:text-4xl"
+    >
+      {i.faq.title}
+    </h2>
+
+    <div class="animate-on-scroll space-y-3">
+      {
+        i.faq.items.map((item) => (
+          <details class="group rounded-xl border border-white/[0.06] bg-white/[0.03] transition-colors open:border-indigo-500/20 open:bg-white/[0.05]">
+            <summary class="flex cursor-pointer items-center justify-between px-6 py-5 text-left text-base font-medium text-foreground transition-colors hover:text-indigo-400 [&::-webkit-details-marker]:hidden">
+              <span class="pr-4">{item.q}</span>
+              <svg
+                class="h-5 w-5 flex-shrink-0 text-muted-foreground transition-transform group-open:rotate-45"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </summary>
+            <div class="px-6 pb-5">
+              <p class="leading-relaxed text-muted-foreground">{item.a}</p>
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>

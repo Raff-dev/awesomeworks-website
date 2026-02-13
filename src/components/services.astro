@@ -1,0 +1,59 @@
+---
+import { t, type Locale } from "@/i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+
+const serviceIcons = [
+  // Search
+  `<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>`,
+  // MessageCircle
+  `<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>`,
+  // Clock
+  `<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+  // Zap
+  `<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
+];
+---
+
+<section id="services" class="relative py-20 sm:py-28">
+  <div class="pointer-events-none absolute inset-0 gradient-mesh"></div>
+
+  <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <h2
+      class="animate-on-scroll mb-4 text-center text-3xl font-bold tracking-tight sm:text-4xl"
+    >
+      {i.services.title}
+    </h2>
+    <p
+      class="animate-on-scroll mx-auto mb-14 max-w-2xl text-center text-muted-foreground"
+    >
+      {i.services.subtitle}
+    </p>
+
+    <div class="grid gap-6 sm:grid-cols-2">
+      {
+        i.services.cards.map((card, idx) => (
+          <div
+            class="animate-on-scroll group rounded-xl border border-white/[0.06] bg-white/[0.03] p-6 transition-all hover:border-indigo-500/20 hover:bg-white/[0.05] sm:p-7"
+            style={`transition-delay: ${idx * 80}ms`}
+          >
+            <div class="mb-4 inline-flex rounded-lg border border-indigo-500/20 bg-indigo-500/10 p-2.5 text-indigo-400 transition-colors group-hover:bg-indigo-500/15">
+              <Fragment set:html={serviceIcons[idx]} />
+            </div>
+            <h3 class="mb-2 text-lg font-semibold text-foreground">
+              {card.title}
+            </h3>
+            <p class="text-[0.925rem] leading-relaxed text-muted-foreground">
+              {card.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

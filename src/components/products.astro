@@ -1,0 +1,76 @@
+---
+import { t, type Locale } from "@/i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+---
+
+<section id="products" class="relative py-20 sm:py-28">
+  <div class="pointer-events-none absolute inset-0 gradient-mesh"></div>
+
+  <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <h2
+      class="animate-on-scroll mb-4 text-center text-3xl font-bold tracking-tight sm:text-4xl"
+    >
+      {i.products.title}
+    </h2>
+    <p
+      class="animate-on-scroll mx-auto mb-12 max-w-2xl text-center text-muted-foreground"
+    >
+      {i.products.subtitle}
+    </p>
+
+    <div class="mx-auto max-w-lg">
+      <div
+        class="animate-on-scroll relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.04] p-8 text-center shadow-[0_0_60px_-12px_hsl(270_60%_60%/0.3)] backdrop-blur-xl"
+      >
+        <!-- CallWise Logo -->
+        <div class="mb-5 flex justify-center">
+          <img
+            src="/callwise-logo.png"
+            alt="CallWise"
+            class="h-16 w-auto"
+            width="62"
+            height="63"
+          />
+        </div>
+
+        <h3 class="mb-1 text-2xl font-bold text-foreground">CallWise</h3>
+        <p class="bg-gradient-to-r from-purple-400 to-violet-300 bg-clip-text text-lg font-semibold text-transparent">
+          {i.products.callwise.tagline}
+        </p>
+        <p class="mt-4 text-sm leading-relaxed text-muted-foreground">
+          {i.products.callwise.description}
+        </p>
+
+        <a
+          href="https://callwise.awesomeworks.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-violet-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-purple-500/25 transition-all hover:shadow-purple-500/40 hover:brightness-110"
+        >
+          {i.products.callwise.cta}
+          <svg
+            class="h-4 w-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+        <p class="mt-3 text-xs text-muted-foreground/70">
+          {i.products.callwise.microcopy}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

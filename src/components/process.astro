@@ -1,0 +1,66 @@
+---
+import { t, type Locale } from "@/i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+
+const stepIcons = [
+  // MessageSquare (conversation)
+  `<svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
+  // FileText (proposal)
+  `<svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 13h4"/><path d="M10 17h4"/></svg>`,
+  // Code (execution)
+  `<svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
+  // Shield (support)
+  `<svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>`,
+];
+
+const stepLabel = locale === "pl" ? "Krok" : "Step";
+---
+
+<section id="process" class="relative py-20 sm:py-28">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <h2
+      class="animate-on-scroll mb-16 text-center text-3xl font-bold tracking-tight sm:text-4xl"
+    >
+      {i.process.title}
+    </h2>
+
+    <div class="relative grid gap-8 md:grid-cols-4 md:gap-6">
+      <!-- Connecting line (desktop) -->
+      <div
+        class="pointer-events-none absolute top-16 right-[12%] left-[12%] hidden h-px border-t border-dashed border-white/[0.1] md:block"
+      >
+      </div>
+
+      {
+        i.process.steps.map((step, idx) => (
+          <div
+            class="animate-on-scroll relative text-center"
+            style={`transition-delay: ${idx * 150}ms`}
+          >
+            <div class="relative mx-auto mb-6 flex h-16 w-16 items-center justify-center">
+              <div class="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-600/20 to-indigo-400/20" />
+              <div class="relative flex h-14 w-14 items-center justify-center rounded-full border border-indigo-500/30 bg-background text-indigo-400">
+                <Fragment set:html={stepIcons[idx]} />
+              </div>
+            </div>
+            <div class="mb-3 inline-flex items-center rounded-full border border-indigo-500/20 bg-indigo-500/10 px-3 py-0.5 text-xs font-semibold uppercase tracking-wider text-indigo-400">
+              {stepLabel} {step.number}
+            </div>
+            <h3 class="mb-3 text-xl font-semibold text-foreground">
+              {step.title}
+            </h3>
+            <p class="mx-auto max-w-xs leading-relaxed text-muted-foreground">
+              {step.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
